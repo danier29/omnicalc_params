@@ -72,10 +72,10 @@ def payment_form
 end
 
 def payment
-  @user_apr=(params["apr"].to_f)/100
-  interest_rate_per_month= @user_apr/(12*100)
-  @user_years=params["years"].to_f
-  @user_principal=params["principal"].to_f
+  @user_apr=(params["user_apr"].to_f)
+  interest_rate_per_month= (@user_apr)/(12*100)
+  @user_years=params["user_years"].to_f
+  @user_principal=params["user_principal"].to_f
 
   numerator= interest_rate_per_month
   @total_months= @user_years*12
